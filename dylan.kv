@@ -1,0 +1,1375 @@
+#:kivy 1.9.1
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+<sm>:
+    transition: NoTransition()
+
+    Main_Screen:
+        name: "main screen"
+    Info_Screen:
+        name: "info screen"
+        
+    Class_Selection_Screen:
+        name: "class selection"
+    Fafnir_Screen:
+        name: "fafnir"
+    Terra_Screen:
+        name: "terra"
+
+    god_info_Screen:
+        name: "god info screen"
+    God_Selection_Screen:
+        name: "god selection screen"
+    Normal_God_Screen:
+        name: "normal god screen"
+    Items_Screen:
+        name: "items screen"
+    Items_Screen_2:
+        name: "items screen 2"
+
+    Combo_Screen:
+        name: "combo screen"
+    Ranks_Screen:
+        name: "ranks screen"
+    Build_Screen:
+        name: "build screen"
+    Target_Class_Screen:
+        name: "target class screen"
+    Target_God_Selection_Screen:
+        name: "target god selection screen"
+    CIDH_Final_Screen:
+        name: "cidh final screen"
+        
+
+<Main_Screen>:
+    FloatLayout:
+        Image:
+            source: "smite_logo.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.5, 0.4
+            pos_hint: { "x": 0.25 , "y": 0.65 }
+        Image:
+            source: "damage_calculator2.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.9, 0.08
+            pos_hint: { "x": 0.05 , "y": 0.67 }
+        ClickableImage:
+            source: "start.png"
+            size_hint: 0.35 , 0.08
+            pos_hint: { "x": 0.325 , "y": 0.48 }
+            on_press: root.turn_off_cidh_and_go()
+        ClickableImage:
+            source: "help.png"
+            size_hint: 0.25 , 0.08
+            pos_hint: { "x": 0.375 , "y": 0.38 }
+            on_press: root.manager.current = "info screen"
+        ClickableImage:
+            source: "can_i_delete_him.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.9, 0.08
+            pos_hint: { "x": 0.05, "y": 0.18 }
+            on_press: root.turn_on_cidh_and_go()
+
+<Info_Screen>:
+    FloatLayout:
+        ScrollableLabel:
+            text: "   Welcome to my humble and simple application. Sorry for my very possible bad english. When you select a god, you can choose several things:\n      God's skills: pressing the corresponding skill buttons, you can select the level of the abilities. Zero points in one skill, means zero damage from that ability.\n      Total power: Magical or Physical. Naturally, this will affect the damage dealt by the abilities and basic attacks.\n      Number of basic attacks: It takes into account the progression of the basic attacks of the particular god.  It also takes into account the god's level and the power.\n      God Level: This only affects the damage dealt with the basic attacks.\n   \n   When you press the CALCULATE button, the total damage will be shown in the screen. This app ignores penetration, heal, slow, or anything else. Is just damage.\n \n   Once in the god's screen, you can touch the god's big image in the top of the screen to go to another screen with information about specific aspects of the god. \n \n   If it isn't necessary, there will not be an info screen.\n \n            ABOUT ME\n \n   I'm an argentinian beginner programmer. I'm 17 and I wrote this app with Python, using the Kivy libraries. I can help you with this if you want. My SMITE profile is Helio7.\n   Any problem you see, or any reasonable suggestion you have, you can tell me about that with a comment in the Google Play description. Thanks you for reading, and I hope you find this useful."
+            font_size: 18
+            size_hint: 0.9, 0.8
+            pos_hint: { "x": 0.05 , "y": 0.1 }
+        BackButton:
+            on_press: root.manager.current = "main screen"
+
+<Class_Selection_Screen>:
+    guardian_btn: guardian_btn
+    hunter_btn: hunter_btn
+    warrior_btn: warrior_btn
+    mage_btn: mage_btn
+    assassin_btn: assassin_btn
+    FloatLayout:
+        Image:
+            source: "choose_your_god_class.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.75 , 0.16
+            pos_hint: { "x": 0.125 , "y": 0.79 }
+        ClickableImage:
+            id: guardian_btn
+            source: "guardian.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.66 }
+            on_press: root.initialize_next_screen_and_go("guardian")
+        ClickableImage:
+            id: hunter_btn
+            source: "hunter.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.53 }
+            on_press: root.initialize_next_screen_and_go("hunter")
+        ClickableImage:
+            id: warrior_btn
+            source: "warrior.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.37 }
+            on_press: root.initialize_next_screen_and_go("warrior")
+        ClickableImage:
+            id: mage_btn
+            source: "mage.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.22 }
+            on_press: root.initialize_next_screen_and_go("mage")
+        ClickableImage:
+            id: assassin_btn
+            source: "assassin.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.07 }
+            on_press: root.initialize_next_screen_and_go("assassin")
+        BackButton:
+            on_press: root.reset_pages_and_go_back()
+
+<God_Selection_Screen>:
+    next_button: next_button
+    previous_button: previous_button
+    FloatLayout:
+        Button:
+            id: next_button
+            text: "Next"
+            size_hint: (0.2 , 0.1)
+            pos_hint: { "x": 0.8 , "y": 0.0 }
+            on_press: root.next_page()
+        Button:
+            id: previous_button
+            text: "Previous"
+            size_hint: (0.2 , 0.1)
+            pos_hint: { "x": 0.0 , "y": 0.0 }
+            on_press: root.previous_page()
+        BackButton:
+            on_press: root.manager.current = "class selection"
+
+<Combo_Screen>:
+    FloatLayout:
+        Image:
+            source: "select_a_combo2.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.75, 0.07
+            pos_hint: { "x": 0.125, "y": 0.88 }
+        BackButton:
+            on_press: root.manager.current = "god selection screen"
+
+<Ranks_Screen>:
+    FloatLayout:
+        Label:
+            text: "Rank your abilities\nin the next order."
+            pos_hint: { "x": 0.5 , "y": 0.9 }
+            size_hint: 0.01, 0.01
+        Label:
+            text: "     (In the game, use the\n'Auto Level-up skills' option)"
+            pos_hint: { "x": 0.5 , "y": 0.15 }
+            size_hint: 0.01, 0.01
+        Button:
+            text: "Next"
+            size_hint: 0.15, 0.075
+            pos_hint: { "x": 0.85, "y": 0.0 }
+            on_press: root.manager.current = "build screen"
+        BackButton:
+            on_press: root.reset_screen_and_go_back()
+
+<Build_Screen>:
+    slot1: slot1
+    slot2: slot2
+    slot3: slot3
+    slot4: slot4
+    slot5: slot5
+    slot6: slot6
+
+    #remove_item: remove_item
+    #edit_item: edit_item
+
+    background1: background1
+    
+    FloatLayout:
+        #ClickableImage:
+         #   id: remove_item
+          #  source: "interface_remove_item.png"
+           # size_hint: 0.109, 0.071
+            #pos_hint: { "x": 0.891, "y": 0.879 }
+            #on_press: root.toggle_remove_mode()
+
+        #ClickableImage:
+         #   id: edit_item
+          #  source: "interface_edit_item.png"
+           # size_hint: 0.109, 0.071
+            #pos_hint: { "x": 0.891, "y": 0.798 }
+            #on_press: root.toggle_edit_mode()
+
+        Label:
+            id: total_mana_label
+            text: "Select your final build."
+            size_hint: 0.01, 0.01
+            pos_hint: { "x": 0.5, "y": 0.8 }
+        
+        Image:
+            id: background1
+            source: "color_gray.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.734, 0.323
+            pos_hint: { "x": 0.133 , "y": 0.342 }
+            
+        ClickableImage:
+            id: slot1
+            source: "1st.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.153 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(1)
+        ClickableImage:
+            id: slot2
+            source: "2nd.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.391 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(2)
+        ClickableImage:
+            id: slot3
+            source: "3rd.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.629 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(3)
+        ClickableImage:
+            id: slot4
+            source: "4th.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.153 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(4)
+        ClickableImage:
+            id: slot5
+            source: "5th.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.391 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(5)
+        ClickableImage:
+            id: slot6
+            source: "6th.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.629 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(6)
+
+        Button:
+            text: "Next"
+            size_hint: 0.15, 0.075
+            pos_hint: { "x": 0.85, "y": 0.0 }
+            on_press: root.manager.current = "target class screen"           
+        BackButton:
+            on_press: root.manager.current = "ranks screen"
+
+<Target_Class_Screen>:
+    guardian_btn: guardian_btn
+    hunter_btn: hunter_btn
+    warrior_btn: warrior_btn
+    mage_btn: mage_btn
+    assassin_btn: assassin_btn
+    FloatLayout:
+        Image:
+            source: "choose_your_targets_class.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.75 , 0.16
+            pos_hint: { "x": 0.125 , "y": 0.79 }
+        ClickableImage:
+            id: guardian_btn
+            source: "guardian.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.66 }
+            on_press: root.initialize_next_screen_and_go("guardian")
+        ClickableImage:
+            id: hunter_btn
+            source: "hunter.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.53 }
+            on_press: root.initialize_next_screen_and_go("hunter")
+        ClickableImage:
+            id: warrior_btn
+            source: "warrior.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.37 }
+            on_press: root.initialize_next_screen_and_go("warrior")
+        ClickableImage:
+            id: mage_btn
+            source: "mage.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.22 }
+            on_press: root.initialize_next_screen_and_go("mage")
+        ClickableImage:
+            id: assassin_btn
+            source: "assassin.png"
+            size_hint: 0.6 , 0.12
+            pos_hint: { "x": 0.2 , "y": 0.07 }
+            on_press: root.initialize_next_screen_and_go("assassin")
+        BackButton:
+            on_press: root.reset_pages_and_go_back()
+
+<Target_God_Selection_Screen>:
+    next_button: next_button
+    previous_button: previous_button
+    FloatLayout:
+        Button:
+            id: next_button
+            text: "Next"
+            size_hint: (0.2 , 0.1)
+            pos_hint: { "x": 0.8 , "y": 0.0 }
+            on_press: root.next_page()
+        Button:
+            id: previous_button
+            text: "Previous"
+            size_hint: (0.2 , 0.1)
+            pos_hint: { "x": 0.0 , "y": 0.0 }
+            on_press: root.previous_page()
+        BackButton:
+            on_press: root.manager.current = "target class screen"
+
+<CIDH_Final_Screen>:
+    player_god_btn: player_god_btn
+    target_god_btn: target_god_btn
+    player_lvl_img: player_lvl_img
+    target_lvl_img: target_lvl_img
+    item1_img: item1_img
+    item2_img: item2_img
+    item3_img: item3_img
+    item4_img: item4_img
+    item5_img: item5_img
+    item6_img: item6_img
+    cidh_answer_img: cidh_answer_img
+    edit_item: edit_item
+    
+    FloatLayout:
+        Image:
+            source: "you.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.141, "y": 0.842 }
+            keep_ratio: False
+            allow_stretch: True
+        Image:
+            source: "your_target.png"
+            size_hint: 0.436, 0.142
+            pos_hint: { "x": 0.532, "y": 0.842 }
+            keep_ratio: False
+            allow_stretch: True
+        ClickableImage:
+            id: player_god_btn
+            source: "loki.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.141, "y": 0.7 }
+            on_press: root.level_up_player()
+        ClickableImage:
+            id: target_god_btn
+            source: "anubis.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.641, "y": 0.7 }
+            on_press: root.level_up_target()
+        Image:
+            source: "level.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.391, "y": 0.5935 }
+            keep_ratio: False
+            allow_stretch: True
+        Image:
+            id: player_lvl_img
+            source: "1.png"
+            size_hint: 0.109, 0.071
+            pos_hint: { "x": 0.1955, "y": 0.629 }
+            keep_ratio: False
+            allow_stretch: True
+        Image:
+            id: target_lvl_img
+            source: "1.png"
+            size_hint: 0.109, 0.071
+            pos_hint: { "x": 0.6955, "y": 0.629 }
+            keep_ratio: False
+            allow_stretch: True
+
+        ClickableImage:
+            id: edit_item
+            source: "interface_edit_item.png"
+            size_hint: 0.109, 0.071
+            pos_hint: { "x": 0.891, "y": 0.3665 }
+            on_press: root.toggle_edit_mode()
+
+        Image:
+            source: "your_build.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.436, 0.071
+            pos_hint: { "x": 0.282, "y": 0.465 }
+        ClickableImage:
+            source: "color_golden.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.5505, 0.24225
+            pos_hint: { "x": 0.22475, "y": 0.22275 }
+            on_press: root.build_up()
+        ClickableImage:
+            id: item1_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.23975 , "y": 0.34875 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(1)
+        ClickableImage:
+            id: item2_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.41825, "y": 0.34875 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(2)
+        ClickableImage:
+            id: item3_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.59675, "y": 0.34875 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(3)
+        ClickableImage:
+            id: item4_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.23975, "y": 0.2325 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(4)
+        ClickableImage:
+            id: item5_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.41825 , "y": 0.2325 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(5)
+        ClickableImage:
+            id: item6_img
+            source: "nothing.png"
+            size_hint: 0.1635, 0.1065
+            pos_hint: { "x": 0.59675, "y": 0.2325 }
+            keep_ratio: False
+            allow_stretch: True
+            on_press: root.upgrade_item_or_do_nothing(6)
+
+        Image:
+            source: "cidh_question.png"
+            size_hint: 0.218, 0.071
+            pos_hint: { "x": 0.2865, "y": 0.100875 }
+            keep_ratio: False
+            allow_stretch: True
+        Image:
+            id: cidh_answer_img
+            source: "cidh_answer_no.png"
+            size_hint: 0.218, 0.071
+            pos_hint: { "x": 0.4955, "y": 0.100875 }
+            keep_ratio: False
+            allow_stretch: True
+            
+        BackButton:
+            on_press: root.manager.current = "target god selection screen"
+
+<god_info_Screen>:
+    FloatLayout:
+        ScrollableLabel:
+            text: root.helptext
+            font_size: 18
+            size_hint: 0.9, 0.8
+            pos_hint: { "x": 0.05 , "y": 0.1 }
+        BackButton:
+            on_press: root.manager.current = root.toScreen
+            
+
+<Normal_God_Screen>:
+    god_big_image: god_big_image
+    total_damage_label: total_damage_label
+    three_inputs_widget: three_inputs_widget
+    floatlayout: floatlayout
+    n_skills_hud: n_skills_hud
+    n_diamonds_hud: n_diamonds_hud
+    calculate_button: calculate_button
+    special_input_widget: special_input_widget
+    
+    FloatLayout:
+        id: floatlayout
+        
+        God_BigImage:
+            id: god_big_image
+            on_press: root.manager.current = root.info_active
+
+        DamageLabel:
+            id: total_damage_label
+            pos_hint: { "x": 0.5 , "y": 0.75 }
+
+        CalculateButton:
+            id: calculate_button
+            pos_hint: { "x": 0.35 , "y": 0.6 }
+            on_press: root.prepare_paramatres_for_calculate_and_then_calculate()
+
+        IntInput:
+            id: special_input_widget
+
+        Three_Int_Inputs:
+            id: three_inputs_widget
+            pos_hint: { "x": 0.15 , "y": 0.4 }
+
+        N_Skills_HUD:
+            id: n_skills_hud
+
+        N_Diamonds_HUD:
+            id: n_diamonds_hud
+
+        BackButton:
+            on_press: root.manager.get_screen("items screen").reset_items_to_zero(); root.manager.current = "god selection screen"
+
+        Button:
+            text: "Items"
+            size_hint: (0.2 , 0.05)
+            pos_hint: { "x": 0.8 , "y": 0.0 }
+            on_press: root.manager.get_screen("items screen").update_labels(); root.manager.current = "items screen"
+
+<Items_Screen>:
+    slot1: slot1
+    slot2: slot2
+    slot3: slot3
+    slot4: slot4
+    slot5: slot5
+    slot6: slot6
+    #slot7: slot7
+    #slot8: slot8
+    #slot9: slot9
+
+    #total_damage_label: total_damage_label
+    total_power_label: total_power_label
+    total_gold_label: total_gold_label
+    total_mana_label: total_mana_label
+
+    remove_item: remove_item
+    edit_item: edit_item
+
+    background1: background1
+    #background2: background2
+    
+    FloatLayout:
+
+        ClickableImage:
+            id: remove_item
+            source: "interface_remove_item.png"
+            size_hint: 0.109, 0.071
+            pos_hint: { "x": 0.891, "y": 0.879 }
+            on_press: root.toggle_remove_mode()
+
+        ClickableImage:
+            id: edit_item
+            source: "interface_edit_item.png"
+            size_hint: 0.109, 0.071
+            pos_hint: { "x": 0.891, "y": 0.798 }
+            on_press: root.toggle_edit_mode()
+
+        #DamageLabel:
+        #    id: total_damage_label
+        #    pos_hint: { "x": 0.5 , "y": 0.9 }
+
+        Label:
+            id: total_mana_label
+            text: "Mana: 0"
+            size_hint: 0.01, 0.01
+            pos_hint: { "x": 0.5, "y": 0.8 }
+
+        Label:
+            id: total_power_label
+            text: "Power: 0"
+            size_hint: 0.01, 0.01
+            pos_hint: { "x": 0.5 , "y": 0.75 }
+        Label:
+            id: total_gold_label
+            text: "Gold required: 0"
+            size_hint: 0.01, 0.01
+            pos_hint: { "x": 0.5 , "y": 0.7 }
+        
+        Image:
+            id: background1
+            source: "color_gray.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.734, 0.323
+            pos_hint: { "x": 0.133 , "y": 0.342 }
+            
+        ClickableImage:
+            id: slot1
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.153 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(1)
+        ClickableImage:
+            id: slot2
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.391 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(2)
+        ClickableImage:
+            id: slot3
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.629 , "y": 0.51 }
+            on_press: root.select_item_slot_and_do_something(3)
+        ClickableImage:
+            id: slot4
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.153 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(4)
+        ClickableImage:
+            id: slot5
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.391 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(5)
+        ClickableImage:
+            id: slot6
+            source: "nothing.png"
+            size_hint: 0.218, 0.142
+            pos_hint: { "x": 0.629 , "y": 0.355 }
+            on_press: root.select_item_slot_and_do_something(6)
+
+        #Image:
+        #    id: background2
+        #    source: "color_gray.png"
+        #    keep_ratio: False
+        #    allow_stretch: True
+        #    size_hint: 0.734, 0.168
+        #    pos_hint: { "x": 0.133 , "y": 0.117 }
+            
+        #ClickableImage:
+        #    id: slot7
+        #    source: "nothing.png"
+        #    keep_ratio: False
+        #    allow_stretch: True
+        #    size_hint: 0.218, 0.142
+        #    pos_hint: { "x": 0.153 , "y": 0.13 }
+        #    on_press: root.select_item_slot_and_do_something(7)
+            
+        #ClickableImage:
+        #    id: slot8
+        #    source: "nothing.png"
+        #    keep_ratio: False
+        #    allow_stretch: True
+        #    size_hint: 0.218, 0.142
+        #    pos_hint: { "x": 0.391 , "y": 0.13 }
+        #    on_press: root.select_item_slot_and_do_something(8)
+
+        #ClickableImage:
+        #    id: slot9
+        #    source: "nothing.png"
+        #    keep_ratio: False
+        #    allow_stretch: True
+        #    size_hint: 0.218, 0.142
+        #    pos_hint: { "x": 0.629 , "y": 0.13 }
+        #    on_press: root.select_item_slot_and_do_something(9)
+                        
+        BackButton:
+            on_press: root.export_power_and_go_back()
+
+<Items_Screen_2>:
+    FloatLayout:
+        Image:
+            source: "label_items.png"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.8, 0.16
+            pos_hint: { "x": 0.1, "y": 0.84 }
+        BackButton:
+            on_press: root.clean_and_go_back()
+
+<N_Diamonds_HUD>:
+    size_hint: 1 , 1
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    state_ability_1a: state_ability_1a
+    state_ability_2a: state_ability_2a
+    state_ability_3a: state_ability_3a
+    state_ability_4a: state_ability_4a
+    state_ability_1b: state_ability_1b
+    state_ability_2b: state_ability_2b
+    state_ability_3b: state_ability_3b
+    state_ability_4b: state_ability_4b
+
+    picture_1a: None
+    picture_2a: None
+    picture_3a: None
+    picture_4a: None
+    picture_1b: None
+    picture_2b: None
+    picture_3b: None
+    picture_4b: None
+
+    size1a : 0.08 , 0.045
+    size2a : 0.08 , 0.045
+    size3a : 0.08 , 0.045
+    size4a : 0.08 , 0.045
+    size1b : 0.08 , 0.045
+    size2b : 0.08 , 0.045
+    size3b : 0.08 , 0.045
+    size4b : 0.08 , 0.045
+
+    pos1a: { "x": 0.0 , "y": 0.0 }
+    pos2a: { "x": 0.0 , "y": 0.0 }
+    pos3a: { "x": 0.0 , "y": 0.0 }
+    pos4a: { "x": 0.0 , "y": 0.0 }
+    pos1b: { "x": 0.0 , "y": 0.0 }
+    pos2b: { "x": 0.0 , "y": 0.0 }
+    pos3b: { "x": 0.0 , "y": 0.0 }
+    pos4b: { "x": 0.0 , "y": 0.0 }
+    
+
+    ClickableDiamond:
+        id: state_ability_1a
+        source: root.picture_1a
+        size_hint: root.size1a
+        pos_hint: root.pos1a
+        on_press: root.change_state_sk(0)
+    ClickableDiamond:
+        id: state_ability_2a
+        source: root.picture_2a
+        size_hint: root.size2a
+        pos_hint: root.pos2a
+        on_press: root.change_state_sk(1)
+    ClickableDiamond:
+        id: state_ability_3a
+        source: root.picture_3a
+        size_hint: root.size3a
+        pos_hint: root.pos3a
+        on_press: root.change_state_sk(2)
+    ClickableDiamond:
+        id: state_ability_4a
+        source: root.picture_4a
+        size_hint: root.size4a
+        pos_hint: root.pos4a
+        on_press: root.change_state_sk(3)
+    ClickableDiamond:
+        id: state_ability_1b
+        source: root.picture_1b
+        size_hint: root.size1b
+        pos_hint: root.pos1b
+        on_press: root.change_state_sk(4)
+    ClickableDiamond:
+        id: state_ability_2b
+        source: root.picture_2b
+        size_hint: root.size2b
+        pos_hint: root.pos2b
+        on_press: root.change_state_sk(5)
+    ClickableDiamond:
+        id: state_ability_3b
+        source: root.picture_3b
+        size_hint: root.size3b
+        pos_hint: root.pos3b
+        on_press: root.change_state_sk(6)
+    ClickableDiamond:
+        id: state_ability_4b
+        source: root.picture_4b
+        size_hint: root.size4b
+        pos_hint: root.pos4b
+        on_press: root.change_state_sk(7)
+
+<N_Skills_HUD>:
+    skill_1_level_image: skill_1_level
+    skill_2_level_image: skill_2_level
+    skill_3_level_image: skill_3_level
+    skill_4_level_image: skill_4_level
+
+    size_hint: 1 , 0.2
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    picture_1: None
+    picture_2: None
+    picture_3: None
+    picture_4: None
+
+    skill_1_points: "sk_l_1.jpg"
+    skill_2_points: "sk_l_1.jpg"
+    skill_3_points: "sk_l_1.jpg"
+    skill_4_points: "sk_l_1.jpg"
+
+    size1a: 0.0 , 0.0
+    pos1a: { "x": 0.0 , "y": 0.0 }
+    size1b: 0.0 , 0.0
+    pos1b: { "x": 0.0 , "y": 0.0 }
+
+    size2a: 0.0 , 0.0
+    pos2a: { "x": 0.0 , "y": 0.0 }
+    size2b: 0.0 , 0.0
+    pos2b: { "x": 0.0 , "y": 0.0 }
+
+    size3a: 0.0 , 0.0
+    pos3a: { "x": 0.0 , "y": 0.0 }
+    size3b: 0.0 , 0.0
+    pos3b: { "x": 0.0 , "y": 0.0 }
+
+    size4a: 0.0 , 0.0
+    pos4a: { "x": 0.0 , "y": 0.0 }
+    size4b: 0.0 , 0.0
+    pos4b: { "x": 0.0 , "y": 0.0 }
+    
+
+    ClickableImage:
+        source: root.picture_1
+        size_hint: root.size1a
+        pos_hint: root.pos1a
+        on_press: root.level_up_skill_1()
+    Image:
+        id: skill_1_level
+        #source: "sk_l_1.jpg"
+        source: root.skill_1_points
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: root.size1b
+        pos_hint: root.pos1b
+
+    ClickableImage:
+        source: root.picture_2
+        size_hint: root.size2a
+        pos_hint: root.pos2a
+        on_press: root.level_up_skill_2()
+    Image:
+        id: skill_2_level
+        #source: "sk_l_1.jpg"
+        source: root.skill_2_points
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: root.size2b
+        pos_hint: root.pos2b
+
+    ClickableImage:
+        source: root.picture_3
+        size_hint: root.size3a
+        pos_hint: root.pos3a
+        on_press: root.level_up_skill_3()
+    Image:
+        id: skill_3_level
+        #source: "sk_l_1.jpg"
+        source: root.skill_3_points
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: root.size3b
+        pos_hint: root.pos3b
+
+    ClickableImage:
+        source: root.picture_4
+        size_hint: root.size4a
+        pos_hint: root.pos4a
+        on_press: root.level_up_skill_4()
+    Image:
+        id: skill_4_level
+        #source: "sk_l_1.jpg"
+        source: root.skill_4_points
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: root.size4b
+        pos_hint: root.pos4b
+
+<Fafnir_Screen>:
+    min_damage_label: min_damage_label
+    skills_hud: skills_hud
+
+    state_ability_1_dwarf: state_ability_1_dwarf
+    state_ability_2_dwarf: state_ability_2_dwarf
+    state_ability_3_dwarf: state_ability_3_dwarf
+    
+    state_ability_1_dragon: state_ability_1_dragon
+    state_ability_2_dragon: state_ability_2_dragon
+    state_ability_3_dragon: state_ability_3_dragon
+    state_ability_4_dragon: state_ability_4_dragon
+    
+    three_inputs_widget: three_inputs_widget
+
+    dragon_basic_attacks_input_widget: dragon_basic_attacks_input_widget
+    
+    FloatLayout:
+        God_BigImage:
+            source: "fafnir2.png"
+            on_press: root.manager.current = "god info screen"
+
+        DamageLabel:
+            id: min_damage_label
+            pos_hint: { "x": 0.7 , "y": 0.72 }
+
+        CalculateButton:
+            pos_hint: { "x": 0.12 , "y": 0.68 }
+            on_press: root.calculate()
+
+        IntInput:
+            id: dragon_basic_attacks_input_widget
+            #pos_hint: { "x": 0.15 , "y": 0.7 }
+            pos_hint: { "x": 0.77 , "y": 0.02 }
+            title: "D. Bas: "
+        
+        Three_Int_Inputs:
+            id: three_inputs_widget
+            pos_hint: { "x": 0.15 , "y": 0.5 }        
+
+        ClickableDiamond:
+            id: state_ability_1_dwarf
+            source: "fafnir_sk_dwarf_off.png"
+            pos_hint: { "x": 0.115 , "y": 0.392 }
+            on_press: root.change_state_sk_1_dw()
+        ClickableDiamond:
+            id: state_ability_2_dwarf
+            source: "fafnir_sk_dwarf_off.png"
+            pos_hint: { "x": 0.345 , "y": 0.392 }
+            on_press: root.change_state_sk_2_dw()
+        ClickableDiamond:
+            id: state_ability_3_dwarf
+            source: "fafnir_sk_dwarf_off.png"
+            pos_hint: { "x": 0.575 , "y": 0.392 }
+            on_press: root.change_state_sk_3_dw()
+
+        ClickableDiamond:
+            id: state_ability_1_dragon
+            source: "fafnir_sk_dragon_off.png"
+            pos_hint: { "x": 0.115 , "y": 0.1 }
+            on_press: root.change_state_sk_1_dr()
+        ClickableDiamond:
+            id: state_ability_2_dragon
+            source: "fafnir_sk_dragon_off.png"
+            pos_hint: { "x": 0.345 , "y": 0.1 }
+            on_press: root.change_state_sk_2_dr()
+        ClickableDiamond:
+            id: state_ability_3_dragon
+            source: "fafnir_sk_dragon_off.png"
+            pos_hint: { "x": 0.575 , "y": 0.1 }
+            on_press: root.change_state_sk_3_dr()
+        ClickableDiamond:
+            id: state_ability_4_dragon
+            source: "fafnir_sk_dragon_off.png"
+            pos_hint: { "x": 0.805 , "y": 0.392 }
+            on_press: root.change_state_sk_4_dr()
+
+        Four_Skills_HUD:
+            id: skills_hud
+            pos_hint: { "x": 0.065 , "y": 0.18 }
+            picture_1: "fafnir_sk_1.png"
+            picture_2: "fafnir_sk_2.png"
+            picture_3: "fafnir_sk_3.png"
+            picture_4: "fafnir_sk_4.png"
+            
+        BackButton:
+            on_press: root.manager.get_screen("items screen").reset_items_to_zero(); root.manager.current = "god selection screen"
+
+        Button:
+            text: "Items"
+            size_hint: (0.2 , 0.05)
+            pos_hint: { "x": 0.0 , "y": 0.0}
+            on_press: root.manager.current = "items screen"
+
+<Terra_Screen>:
+    total_damage_label: total_damage_label
+    skills_hud: skills_hud
+    
+    three_inputs_widget: three_inputs_widget
+
+    skill_5_level: skill_5_level
+
+    state_ability_1: state_ability_1
+    state_ability_2a: state_ability_2a
+    state_ability_2b: state_ability_2b
+
+    passive_basic_attacks_input_widget: passive_basic_attacks_input_widget
+    
+    FloatLayout:
+        God_BigImage:
+            source: "terra2.png"
+            on_press: root.manager.current = "god info screen"
+
+        DamageLabel:
+            id: total_damage_label
+            pos_hint: { "x": 0.7 , "y": 0.73 }
+
+        CalculateButton:
+            pos_hint: { "x": 0.15 , "y": 0.69 }
+            on_press: root.calculate()
+
+        Three_Int_Inputs:
+            id: three_inputs_widget
+            pos_hint: { "x": 0.15 , "y": 0.51 }
+
+        Label:
+            text: "P. Bas:"
+            size_hint: (0.01 , 0.01)
+            pos_hint: { "x": 0.22 , "y": 0.42 }
+        IntInput:
+            id: passive_basic_attacks_input_widget
+            pos_hint: { "x": 0.4 , "y": 0.37 }
+            title: " "       
+
+        ClickableDiamond:
+            id: state_ability_1
+            source: "terra_sk_state_1-2.png"
+            pos_hint: { "x": 0.115 , "y": 0.3 }
+            on_press: root.change_state_sk1()
+        ClickableDiamond:
+            id: state_ability_2a
+            source: "terra_sk_state_0.png"
+            pos_hint: { "x": 0.371 , "y": 0.3 }
+            on_press: root.change_state_sk2a()
+        ClickableDiamond:
+            id: state_ability_2b
+            source: "terra_sk_state_0.png"
+            pos_hint: { "x": 0.549 , "y": 0.3 }
+            on_press: root.change_state_sk2b()
+
+        Four_Skills_Terra_HUD:
+            id: skills_hud
+            pos_hint: { "x": 0.065 , "y": 0.1 }
+            picture_1: "terra_sk_1.png"
+            picture_2: "terra_sk_2_a.png"
+            picture_3: "terra_sk_2_b.png"
+            picture_4: "terra_sk_3.png"
+
+        ClickableImage:
+            source: "terra_sk_4.png"
+            size_hint: 0.18 , 0.13
+            pos_hint: { "x": 0.755 , "y": 0.344 }
+            on_press: root.level_up_skill_5()
+        Image:
+            id: skill_5_level
+            source: "sk_l_1.jpg"
+            keep_ratio: False
+            allow_stretch: True
+            size_hint: 0.18, 0.037
+            pos_hint: { "x": 0.755 , "y": 0.302 }
+            
+        BackButton:
+            text: "Back"
+            size_hint: (0.4 , 0.05)
+            pos_hint: { "x": 0.3 , "y": 0.0 }
+            on_press: root.manager.get_screen("items screen").reset_items_to_zero(); root.manager.current = "god selection screen"
+
+        Button:
+            text: "Items"
+            size_hint: (0.2 , 0.05)
+            pos_hint: { "x": 0.8 , "y": 0.0 }
+            on_press: root.manager.current = "items screen"
+
+<Three_Int_Inputs>:
+    size_hint: 0.7 , 0.2
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    int_input_1: int_input_1
+    int_input_2: int_input_2
+    int_input_3: int_input_3
+    
+    IntInput:
+        id: int_input_1
+        title: "Bas:"
+        size_hint: 0.286, 1.0
+    IntInput:
+        id: int_input_2
+        title: "Pow:"
+        size_hint: 0.286, 1.0
+        pos_hint: { "x": 0.356, "y": 0.0 }
+    IntInput:
+        id: int_input_3
+        title: "Lvl:"
+        existe_cero: False
+        size_hint: 0.286, 1.0
+        pos_hint: { "x": 0.712, "y": 0.0 }
+
+<IntInput>:
+    size_hint: ( 0.2 , 0.2 )
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+    
+    int_input_textinput: int_input_textinput
+    int_input_num: 0
+    existe_cero: True
+    
+    title: " "
+    
+    Label:
+        text: root.title
+        size_hint: (1.0 , 0.5)
+        pos_hint: { "x": 0.0, "y": 0.4 }
+    TextInput:
+        id: int_input_textinput
+        multiline: False
+        input_filter: "int"
+        size_hint: ( 1.0 , 0.5 )
+        pos_hint: { "x": 0.0 , "y": 0.0 }
+        on_text: root.save_int()
+    
+<ScrollableLabel>:
+    font_size: 20
+    Label:
+        size_hint_y: None
+        height: self.texture_size[1]
+        text_size: self.width, None
+        text: root.text
+        font_size: root.font_size   
+
+<Two_Skills_HUD>:
+    skill_1_level_image: skill_1_level
+    skill_2_level_image: skill_2_level
+    two_skils_hud_widget: two_skills_hud
+
+    id: two_skills_hud
+    size_hint: ( 0.45 , 0.172 )
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    picture_1: None
+    picture_2: None
+
+    skill_1_number: 1
+    skill_2_number: 1
+    
+    ClickableImage:
+        source: root.picture_1
+        size_hint: (0.444, 0.756)
+        pos_hint: { "x": 0.0 , "y": 0.244 }
+        on_press: root.level_up_skill_1()
+    Image:
+        id: skill_1_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.444, 0.215)
+        pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_2
+        size_hint: (0.444 , 0.756)
+        pos_hint: { "x": 0.555 , "y": 0.244 }
+        on_press: root.level_up_skill_2()
+    Image:
+        id: skill_2_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.444, 0.215)
+        pos_hint: { "x": 0.555 , "y": 0.0 }
+
+<Three_Skills_HUD>:
+    skill_1_level_image: skill_1_level
+    skill_2_level_image: skill_2_level
+    skill_3_level_image: skill_3_level
+
+    id: three_skills_hud
+    size_hint: ( 0.7 , 0.172 )
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    picture_1: None
+    picture_2: None
+    picture_3: None
+
+    skill_1_number: 1
+    skill_2_number: 1
+    skill_3_number: 1
+    
+    ClickableImage:
+        source: root.picture_1
+        size_hint: (0.286 , 0.756)
+        pos_hint: { "x": 0.0 , "y": 0.244 }
+        on_press: root.level_up_skill_1()
+    Image:
+        id: skill_1_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.286, 0.215)
+        pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_2
+        size_hint: (0.286 , 0.756)
+        pos_hint: { "x": 0.357 , "y": 0.244 }
+        on_press: root.level_up_skill_2()
+    Image:
+        id: skill_2_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.286, 0.215)
+        pos_hint: { "x": 0.357 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_3
+        size_hint: (0.286 , 0.756)
+        pos_hint: { "x": 0.714 , "y": 0.244 }
+        on_press: root.level_up_skill_3()
+    Image:
+        id: skill_3_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.286, 0.215)
+        pos_hint: { "x": 0.714 , "y": 0.0 }
+
+<Four_Skills_HUD>:
+    skill_1_level_image: skill_1_level
+    skill_2_level_image: skill_2_level
+    skill_3_level_image: skill_3_level
+    skill_4_level_image: skill_4_level
+    four_skills_hud_widget: four_skills_hud
+
+    id: four_skills_hud
+    size_hint: ( 0.87 , 0.172 )
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    picture_1: None
+    picture_2: None
+    picture_3: None
+    picture_4: None
+
+    skill_1_number: 1
+    skill_2_number: 1
+    skill_3_number: 1
+    skill_4_number: 1
+    
+    ClickableImage:
+        source: root.picture_1
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.0 , "y": 0.244 }
+        on_press: root.level_up_skill_1()
+    Image:
+        id: skill_1_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_2
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.264 , "y": 0.244 }
+        on_press: root.level_up_skill_2()
+    Image:
+        id: skill_2_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.264 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_3
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.528 , "y": 0.244 }
+        on_press: root.level_up_skill_3()
+    Image:
+        id: skill_3_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.528 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_4
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.792 , "y": 0.244 }
+        on_press: root.level_up_skill_4()
+    Image:
+        id: skill_4_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.792 , "y": 0.0 }
+
+<Four_Skills_Terra_HUD>:
+    skill_1_level_image: skill_1_level
+    skill_2_level_image: skill_2_level
+    skill_4_level_image: skill_4_level
+    four_skills_hud_widget: four_skills_hud
+
+    id: four_skills_hud
+    size_hint: ( 0.87 , 0.172 )
+    pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    picture_1: None
+    picture_2: None
+    picture_3: None
+    picture_4: None
+
+    skill_1_number: 1
+    skill_2_number: 1
+    skill_3_number: 1
+    skill_4_number: 1
+    
+    ClickableImage:
+        source: root.picture_1
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.0 , "y": 0.244 }
+        on_press: root.level_up_skill_1()
+    Image:
+        id: skill_1_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.0 , "y": 0.0 }
+
+    ClickableImage:
+        source: root.picture_2
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.29 , "y": 0.244 }
+        on_press: root.level_up_skill_2()
+    ClickableImage:
+        source: root.picture_3
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.502 , "y": 0.244 }
+        on_press: root.level_up_skill_2()
+    Image:
+        id: skill_2_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.3965 , "y": 0.0 }
+
+
+    ClickableImage:
+        source: root.picture_4
+        size_hint: (0.207 , 0.756)
+        pos_hint: { "x": 0.792 , "y": 0.244 }
+        on_press: root.level_up_skill_4()
+    Image:
+        id: skill_4_level
+        source: "sk_l_1.jpg"
+        keep_ratio: False
+        allow_stretch: True
+        size_hint: (0.207, 0.215)
+        pos_hint: { "x": 0.792 , "y": 0.0 }
+        
+<BackButton>:
+    text: "Back"
+    size_hint: (0.4 , 0.05)
+    pos_hint: { "x": 0.3 , "y": 0.0 }
+
+<God_BigImage>:
+    keep_ratio: False
+    allow_stretch: True
+    size_hint: (0.94 , 0.17)
+    pos_hint: { "x": 0.03 , "y": 0.8 }
+
+<ClickableImage>:
+    keep_ratio: False
+    allow_stretch: True
+
+<CalculateButton>:
+    text: "Calculate"
+    size_hint: 0.3 , 0.075
+
+<DamageLabel>:
+    text: "Damage: 0"
+    size_hint: 0.01, 0.01
+
+<ClickableDiamond>:
+    size_hint: (0.08 , 0.045)
+
+<God_Icon>:
+    size_hint: 0.218, 0.142

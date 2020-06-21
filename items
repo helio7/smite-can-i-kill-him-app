@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <item name="item1">
+    <power>0</power>
+    <cost />
+    <mana />
+  </item>
+  <item name="item2">
+    <power>0</power>
+  </item>
+  <item name="item3">
+    <power>0</power>
+  </item>
+</data>
