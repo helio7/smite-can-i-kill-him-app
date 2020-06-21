@@ -1,0 +1,7 @@
+            FENRIR
+
+ Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.
+   - 3 damage ticks.
+   - the 4 damage ticks.

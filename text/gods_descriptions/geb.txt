@@ -1,0 +1,13 @@
+            GEB
+
+ Skill 1:
+   - minimum damage. 50% of the maximum.
+   - medium damage. 75% of the maximum.
+   - maximum damage.
+
+ Skill 2:
+   - minimum damage. 50% of the maximum.
+   - medium damage. 75% of the maximum.
+   - maximum damage.
+
+   The +n% factor is damage based on a percent of the target's current health.

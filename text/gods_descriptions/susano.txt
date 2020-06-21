@@ -1,0 +1,10 @@
+            SUSANO
+
+ Skill 1:
+   - hitting just the first attack.
+   - hitting the first 2 attacks.
+   - hitting the 3 attacks.
+
+ Skill 4:
+   - minimum damage. Throwing the hurricane early.
+   - maximum damage.

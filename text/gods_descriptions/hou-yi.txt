@@ -1,0 +1,11 @@
+            HOU YI
+
+ Skill 1:
+   - hitting the ability without bounces. Minimum damage.
+   - hitting the ability with 1 bounce. 40% more damage.
+   - hitting the ability with 2 bounces. 80% more damage.
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - average damage. 4 ticks.
+   - maximum damage. 9 ticks.

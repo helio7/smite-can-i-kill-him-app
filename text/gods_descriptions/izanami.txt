@@ -1,0 +1,3 @@
+            IZANAMI
+
+   You can select the number of basic attacks affected by the damage buff of the ability 1 with the "Sk1 bas:" input box.

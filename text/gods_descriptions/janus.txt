@@ -1,0 +1,10 @@
+            JANUS
+
+ Skill 2:
+   - damage with just 1 portal.
+   - damage with the 2 portals.
+
+ Skill 3:
+   - minimum damage. Minimum distance.
+   - medium damage. Half of the maximum distance.
+   - maximum damage. Maximum distance or more.

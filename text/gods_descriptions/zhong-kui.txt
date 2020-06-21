@@ -1,0 +1,10 @@
+            ZHONG KUI
+
+ Skill 1:
+   - removing the card. Doing just the 75% of the maximum damage.
+   - not removing the card. Doing the maximum damage.
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - medium damage. 3 ticks.
+   - maximum damage. The 5 ticks.

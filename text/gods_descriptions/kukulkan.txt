@@ -1,0 +1,6 @@
+            KUKULKAN
+
+ Skill 2:
+   - minimum damage. 5 ticks.
+   - medium damage. 9 ticks.
+   - maximum damage. 13 ticks.

@@ -1,0 +1,10 @@
+            THOR
+
+ Skill 1:
+   - 1 damage tick.
+   - the 2 damage ticks.
+
+ Skill 2:
+   - minimum damage. 1 tick.
+   - medium damage. 3 ticks.
+   - maximum damage. 5 ticks.

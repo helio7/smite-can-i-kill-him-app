@@ -1,0 +1,12 @@
+            SKADI
+
+ Skill 3:
+   - initial damage and 1 minor tick.
+   - initial damage and 3 minor ticks.
+   - initial damage and 5 minor ticks.
+
+ Skill 4:
+   - 4 damage ticks.
+   - 8 damage ticks.
+
+   You can select the number of basic attacks made by Kaldr, using the "K. basics:" input box.

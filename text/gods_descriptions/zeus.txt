@@ -1,0 +1,22 @@
+            ZEUS
+
+ Skill 1:
+   - minimum damage. 1 tick.
+   - 2 ticks.
+   - maximum damage. 3 ticks.
+
+ Skill 2:
+   - just the damage of the shield.
+   - the damage of the shield and 1 tick more.
+   - the damage of the shield and 2 ticks more.
+   - the damage of the shield and 3 ticks more.
+
+ Skill 3:
+   - detonating 1 charge.
+   - detonating 2 charges.
+   - detonating 3 charges.
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - average damage. 3 ticks.
+   - maximum damage. 5 ticks.

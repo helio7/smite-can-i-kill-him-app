@@ -1,0 +1,10 @@
+Transcendence and The Book of Thoth already take into account god's total mana. That is: god's base mana, god's mana per level and mana provenient from items.
+
+La pasiva de la bendición del cazador (en adelante BC) depende del número de ataques básicos seleccionados en la pantalla del dios y afecta el daño de los mismos. También afecta a los ataques básicos independientes seleccionados en el ítem de la estrella de la hydra y el lamento de la hydra.
+
+La pasiva de la bendición del mago (en adelante BM) depende del número de habilidades activas en la pantalla del dios. Si una habilidad está rankeada a un nivel distinto de 0, la bonificación de daño de BM será añadida. Generalmente, se calcula sólo una bonificación (25 de daño) por habilidad, pero hay excepciones. Hay habilidades que no realizan daño; y hay una habilidad que puede ser afectada hasta 3 veces: la habilidad 4 de Agni.
+
+La pasiva de la estrella de la hydra y el lamento de la hydra (en adelante EH y LH) afectan
+al siguiente ataque básico después de una habilidad. En la mayoría de los casos (tal vez en todos, pero no creo), después de castear una habilidad, la cadena de progresión de ataques básicos se reinicia. Por lo tanto, las pasivas de EH y LH sólo afectan al primer ataque básico de esa cadena. Puedes seleccionar la cantidad de ataques básicos afectados por la pasiva de EH y LH, añadiendole cargas al item, hasta un máximo de 3. Los ataques básicos que selecciones de esta forma son TOTALMENTE INDEPENDIENTES del número de ataques básicos seleccionados en la pantalla del dios. Por lo tanto, si le añades 2 cargas a EH o LH, no es necesario que añadas ataques básicos en la pantalla del dios.
+
+Para el cálculo del daño de la pasiva del polynomicon, no se tiene en cuenta el daño proveniente del ataque básico que lo desencadene. Puedes seleccionar cuantas veces se aplicará el potenciamiento del polynomicón (75% del poder) añadiéndole cargas al ítem, hasta un máximo de 3. Estas cargas sólo añaden el 75% del poder como daño cada una, no añaden el daño de un ataque básico.

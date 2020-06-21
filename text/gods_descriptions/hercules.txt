@@ -1,0 +1,6 @@
+            HERCULES
+
+ Skill 3:
+   - hitting the skill without bounces.
+   - hitting the skill with 1 bounce.
+   - hitting the skill with 2 bounces.

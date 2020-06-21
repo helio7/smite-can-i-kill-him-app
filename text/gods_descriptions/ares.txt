@@ -1,0 +1,7 @@
+            ARES
+
+   Skill 1:
+   - minimum damage. 5 ticks. 1 chain.
+   - maximum damage. 10 ticks. 3 correctly timed chains.
+
+   The +n% factor is damage based on a percent of the target's maximum health.

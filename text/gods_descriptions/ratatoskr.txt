@@ -1,0 +1,12 @@
+            RATATOSKR
+
+ Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.
+   - 3 damage ticks.
+   - the 4 damage ticks.
+
+ Skill 3:
+   - hitting just 1 projectile.
+   - hitting 2 projectiles.
+   - hitting the 3 projectiles.

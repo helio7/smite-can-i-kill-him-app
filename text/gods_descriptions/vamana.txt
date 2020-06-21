@@ -1,0 +1,7 @@
+            VAMANA
+
+ Skill 3:
+   - hitting just 1 damage tick.
+   - hitting the 2 damage ticks.
+
+ You can select the number of basic attacks from the ult with the "Ult bas:" input box.

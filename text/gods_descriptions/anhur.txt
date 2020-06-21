@@ -1,0 +1,8 @@
+            ANHUR
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - medium damage. 4 ticks.
+   - maximum damage. 8 ticks.
+
+   You can select the number of basic attacks affected by the damage buff of the ability 1, using the "Sk1 bas:" input box.

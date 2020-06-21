@@ -1,0 +1,20 @@
+            SOL
+
+ Skill 1:
+   - minimum damage. 1 tick.
+   - medium damage. 3 ticks.
+   - maximum damage. 5 ticks.
+
+ Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - medium damage. 3 ticks.
+   - maximum damage. 6 ticks.
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - average damage. 4 ticks.
+   - maximum damage. 8 ticks.

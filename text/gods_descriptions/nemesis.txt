@@ -1,0 +1,9 @@
+            NEMESIS
+
+ Skill 1:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+ Skill 2:
+   - minimum damage.
+   - maximum damage. Damage dealt to the enemies in the center of the ability.

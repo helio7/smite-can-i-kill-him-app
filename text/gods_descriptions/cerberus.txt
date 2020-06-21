@@ -1,0 +1,7 @@
+            CERBERUS
+
+ Skill 1:
+   - just hitting 1 projectile.
+   - hitting 2 projectiles.
+   - hitting 3 projectiles.
+   - hitting the 4 projectiles.

@@ -1,0 +1,16 @@
+            AGNI
+
+ Skill 1:
+   - minimum damage. Just 1 tick.
+   - low-medium damage. 3 ticks.
+   - maximum damage. 10 ticks.
+
+ Skill 3:
+   - minimum damage. 4 ticks.
+   - average damage. 7 ticks.
+   - maximum damage. 10 ticks.
+
+ Skill 4:
+   - hitting 1 halo.
+   - hitting 2 halos.
+   - hitting 3 halos.

@@ -1,0 +1,11 @@
+            NEITH
+
+ Skill 1:
+   - hitting the ability without detonations.
+   - hitting the ability with 1 detonation.
+   - hitting the ability with 2 detonations.
+
+ Skill 4:
+   - minimum damage. 50% of the maximum if the arrow is fired early.
+   - medium damage. 65% of the maximum with 1 second of channeling.
+   - maximum damage. 2 seconds of channeling.

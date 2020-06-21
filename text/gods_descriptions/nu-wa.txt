@@ -1,0 +1,14 @@
+            NU WA
+
+ Skill 1:
+   - minimum damage. The first damage tick.
+   - medium damage. The first tick and 2 minor ticks.
+   - maximum damage. The first tick and the 5 minor ticks.
+
+ Skill 3:
+   - hitting the projectile without clay soldiers explosions.
+   - hitting the projectile with 1 explosion.
+   - hitting the projectile with 2 explosions.
+   - hitting the projectile with the 3 explosions.
+
+   You can select the number of basic attacks of the clay soldiers with the "C. S. bas:" input box.

@@ -1,0 +1,9 @@
+            ACHILLES
+
+      Skill 1:
+   - 70% of the maximum damage.
+   - 100% of the maximum damage.
+
+      Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.

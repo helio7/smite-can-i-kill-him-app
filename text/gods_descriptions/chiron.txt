@@ -1,0 +1,8 @@
+            CHIRON
+
+ Skill 4:
+   - 1 damage tick.
+   - 2 damage ticks.
+   - 3 damage ticks.
+
+   You can select the number of basic attacks made while Chiron is galloping, using the "Sk3 bas:" input box.

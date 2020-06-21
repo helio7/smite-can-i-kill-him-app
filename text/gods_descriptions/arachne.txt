@@ -1,0 +1,3 @@
+            ARACHNE
+
+   You can select the number of damage ticks from the pets of the ability WEB with the "W. ticks:" input box.

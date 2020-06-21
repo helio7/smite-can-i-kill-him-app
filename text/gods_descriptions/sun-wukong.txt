@@ -1,0 +1,7 @@
+            SUN WUKONG
+
+ Skill 3:
+   - tiger damage.
+   - ox damage.
+
+ You can select the number of basic attacks that the pet does with the "Pet bas:" input box.

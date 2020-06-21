@@ -1,0 +1,5 @@
+            CHAAC
+
+ Skill 2:
+   - using the ability normally (just 1 damage tick).
+   - using the ability while the axe is in the floor. And hitting the second tick (2 damage ticks in total).

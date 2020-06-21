@@ -1,0 +1,4 @@
+            BACCHUS
+
+ Skill 3:
+   - You can touch the diamond to activate the power buff of the ability INTOXICATE. The buff will be applied to the total power before calculate the damage of the basic attacks, BELLY FLOP and BELCH OF THE GODS

@@ -1,0 +1,6 @@
+            AWILIX
+
+ Skill 2:
+   - attack progression bonus: 1x
+   - attack progression bonus: 1.5x
+   - attack progression bonus: 2x

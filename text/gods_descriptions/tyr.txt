@@ -1,0 +1,7 @@
+            TYR
+
+ Skill 1 A:
+   - hitting just 1 damage tick.
+   - hitting the 2 damage ticks.
+
+   You can active each ability of each phase, individually, using the diamond buttons.

@@ -1,0 +1,11 @@
+            KALI
+
+ Skill 2:
+   - 1 blade and the bleeding.
+   - 2 blades and the bleeding.
+   - the 3 blades and the bleeding.
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - medium damage. 4 ticks.
+   - maximum damage.

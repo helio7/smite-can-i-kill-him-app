@@ -1,0 +1,10 @@
+            MEDUSA
+
+ Skill 1:
+   - hitting just 1 Vipper shot.
+   - hitting 2 Viper shots.
+   - hitting the 3 Viper shots.
+
+ Skill 4:
+   - minimum damage. 75% of the maximum if the enemy isn't looking at you.
+   - maximum damage if the enemy is looking at you.

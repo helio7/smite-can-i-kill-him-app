@@ -1,0 +1,8 @@
+            GUAN YU
+
+ Skill 2:
+   - minimum damage: 1 tick.
+   - average damage: 5 ticks.
+   - maximum damage: 10 ticks.
+
+ You can select the number of attacks from the horse with the "H. att:" input box.

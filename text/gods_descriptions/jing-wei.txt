@@ -1,0 +1,12 @@
+            JING WEI
+
+ Skill 1:
+   - initial damage and 1 minor tick.
+   - initial damage and 3 minor ticks.
+   - initial damage and 5 minor ticks. Maximum damage.
+
+ Skill 2:
+   - minor power buff. Using this ability in the ground.
+   - great power buff. Using this ability in the air.
+
+   You can select the number of basic attacks affected by the power buff of the ability 2, with the "Sk2 bas:" input box.

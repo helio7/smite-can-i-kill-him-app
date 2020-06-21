@@ -1,0 +1,8 @@
+            RAMA
+
+ Skill 3:
+   - hitting the first strike.
+   - hitting the first two strikes.
+   - hitting the three strikes.
+
+   You can select the number of basic attacks affected by the damage buff of the ability 1, with the "Sk1 bas:" input box.

@@ -1,0 +1,7 @@
+            ODIN
+
+ Skill 2:
+   - explosion of the shield with 25% of its health.
+   - explosion of the shield with 50% of its health.
+   - explosion of the shield with 75% of its health.
+   - explosion of the shield with 100% of its health.

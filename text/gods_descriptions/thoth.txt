@@ -1,0 +1,12 @@
+            THOTH
+
+ Skill 1:
+   - hitting 1 projectile.
+   - hitting 2 projectiles.
+   - hitting the 3 projectiles.
+
+ Skill 4:
+   - hitting the projectile with only the base glyph.
+   - hitting the projectile with 1 extra glyph.
+   - hitting the projectile with 2 extra glyphs.
+   - hitting the projectile with the 3 extra glyphs.

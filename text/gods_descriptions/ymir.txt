@@ -1,0 +1,8 @@
+            YMIR
+
+ Skill 4:
+   - minimum damage. 30% of the maximum.
+   - average damage. 65% of the maximum.
+   - maximum damage.
+
+   If you put one point in at least one ability, the damage from the basic attacks will be multiplied by 2, because the passive FROSTBITE.

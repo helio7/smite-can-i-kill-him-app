@@ -1,0 +1,11 @@
+            CHERNOBOG
+
+ Skill 1:
+   - initial damage without detonation.
+   - initial damage and the detonation.
+
+ Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+   You can select the number of damage ticks of the passive with the "P. ticks:" input box.

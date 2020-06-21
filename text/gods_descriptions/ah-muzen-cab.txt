@@ -1,0 +1,8 @@
+            AH MUZEN CAB
+
+ Skill 2:
+   - 2 damage ticks.
+   - 4 damage ticks.
+   - maximum damage. 7 ticks.
+
+ Each active ability will add the damage of the passive.

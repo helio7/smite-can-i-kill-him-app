@@ -1,0 +1,12 @@
+            VULCAN
+
+ Skill 2:
+   - the Inferno Cannon doesn't have the buff of the ability 1.
+   - the Inferno Cannon has the buff of the ability 1.
+
+ Skill 4:
+   - minimum damage. 60% of the maximum. Minimum distance.
+   - medium damage. 80% of the maximum. Half distance of the maximum.
+   - maximum damage. Maximum distance.
+
+   You can select the number of attacks of the Inferno Cannon with the "C. attacks:" input box.

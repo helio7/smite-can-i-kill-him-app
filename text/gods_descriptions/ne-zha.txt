@@ -1,0 +1,9 @@
+            NE ZHA
+
+ Skill 4:
+   - using the ability without critic attacks.
+   - hitting 1 critic attack.
+   - hitting 2 critic attacks.
+   - hitting the 3 critic attacks.
+
+   You can select the number of ticks from the ability 1 with the "Sk 1 ticks:" input box.

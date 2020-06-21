@@ -1,0 +1,11 @@
+            CUPID
+
+ Skill 1:
+   - not affected by the passive buff.
+   - affected by the passive buff.
+
+ Skill 2:
+   - not affected by the passive buff.
+   - affected by the passive buff.
+
+   You can select the number of stacks of the passive with the "P. stacks:" input box.

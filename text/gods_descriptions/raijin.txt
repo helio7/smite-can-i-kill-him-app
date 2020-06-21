@@ -1,0 +1,12 @@
+            RAIJIN
+
+ Skill 1:
+   - hitting 1 projectile.
+   - hitting 2 projectiles.
+   - hitting the 4 projectiles.
+
+ Skill 4:
+   - minimum damage. 1 minor hit. 30% base damage total.
+   - 1 great hit and 2 minor hits. 160% base damage total.
+   - 2 great hits and 1 minor hit. 260% base damage total.
+   - 3 great hits. 300% base damage total.

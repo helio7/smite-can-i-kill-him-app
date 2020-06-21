@@ -1,0 +1,6 @@
+            RA
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - medium damage. 3 ticks.
+   - maximum damage. 6 ticks.

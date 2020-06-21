@@ -1,0 +1,17 @@
+            PELE
+
+ Skill 1:
+   - hitting just the first tick.
+   - hitting the first tick and a few more.
+   - hitting the first tick and all the others.
+
+ Skill 2:
+   - maximum damage.
+   - minor damage.
+
+ Skill 3:
+   - 2 damage tick (1 in amplified state).
+   - 4 damage ticks (2 in amplified state).
+   - 6 damage ticks (3 in amplified state).
+   - 8 damage ticks (4 in amplified state).
+   - 10 damage ticks (5 in amplified state).

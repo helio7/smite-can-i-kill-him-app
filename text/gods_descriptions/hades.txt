@@ -1,0 +1,10 @@
+            HADES
+
+ Skill 2:
+   - hitting the ability without detonations.
+   - hitting the ability with 1 detonation.
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - average damage. 4 ticks.
+   - maximum damage. 8 ticks.

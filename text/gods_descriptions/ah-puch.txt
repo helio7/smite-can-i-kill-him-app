@@ -1,0 +1,16 @@
+            AH PUCH
+
+ Skill 2:
+   - explosion without corpses.
+   - explosion with 1 corpse.
+   - explosion with 2 corpses.
+   - explosion with 3 corpses.
+
+ Skill 3:
+   - without the extra damage for healing.
+   - with the extra damage for healing.
+
+ Skill 4:
+   - minimum damage. 1 tick.
+   - average damage. 7 ticks (approx.).
+   - maximum damage. 14 ticks (approx.).

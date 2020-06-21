@@ -1,0 +1,12 @@
+            KUZENBO
+
+ Skill 1:
+   - hitting the NeNe Kappa. Then he just does 1 basic attack.
+   - hitting the NeNe Kappa. Then he does all the 5 basic attacks.
+
+ Skill 3:
+   - 1 damage tick.
+   - 2 damage ticks.
+   - 3 damage ticks.
+
+   The +n% factor is damage based on a percent of the damage taken while the ability 2 is active.

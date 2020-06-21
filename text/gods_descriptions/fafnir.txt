@@ -1,0 +1,22 @@
+            FAFNIR
+
+   Considered combo:
+
+   -Start as a dwarf.
+   -Use COERCE.
+   -Use UNDERHANDED TACTICS.
+   -Use CURSED STRENGTH.
+   -Immediately do some basic attacks OR use DRAGONIC CORRUPTION.
+   -Continue as a dragon.
+   -Use COERCE.
+   -Use UNDERHANDED TACTICS.
+   -Use CURSED STRENGTH.
+   -Attack with dragon basics.
+
+
+   You can active each ability of each phase, individually, using the diamond buttons.
+
+   If you active COERCE, the damage of CURSED STRENGTH, UNDERHANDED TACTICS and the normal/dragon basics will be increased.
+   In this calculation, COERCE doesn't affect the damage of the three ticks of DRAGONIC CORRUPTION.
+
+   You can specify the number of dragon basics attacks, with the "D. Bas" input box down on the right.

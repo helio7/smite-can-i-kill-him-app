@@ -1,0 +1,7 @@
+            ATHENA
+
+ Skill 2:
+   - just the first damage tick.
+   - the 2 damage ticks.
+
+   You can select the number of attacks from the passive with the "P. bas:" input box.

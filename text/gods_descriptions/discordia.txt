@@ -1,0 +1,8 @@
+            DISCORDIA
+
+ Skill 2:
+   - hitting the ability, without the basic attacks from the madness effect.
+   - hitting the ability, with 1 basic attack from the madness effect.
+   - hitting the ability, with 2 basic attacks from the madness effect.
+
+   You can select the number of minor ticks of the ability 1 with the "Minor ticks:" input box.

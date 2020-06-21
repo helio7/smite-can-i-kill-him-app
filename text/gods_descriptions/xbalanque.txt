@@ -1,0 +1,12 @@
+            XBALANQUE
+
+ Skill 2:
+   - hitting just 1 dart.
+   - hitting 2 darts.
+   - hitting the 3 darts.
+
+ Skill 3:
+   - hitting an enemy without poison.
+   - hitting a poisoned enemy.
+
+   You can select the number of basic attacks affected by the damage buff of the ability 1, using the "Sk1 bas:" input box.

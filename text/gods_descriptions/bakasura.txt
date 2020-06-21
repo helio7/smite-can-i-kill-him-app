@@ -1,0 +1,3 @@
+            BAKASURA
+
+   You can select the number of damage ticks from the regurgitated minions of the ult with the "Ult ticks:" input box.

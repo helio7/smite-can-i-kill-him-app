@@ -1,0 +1,7 @@
+         BARON SAMEDI
+
+ Skill 1:
+   - hitting just 1 beam.
+   - hitting the 2 beams.
+
+   You can select the number of minor ticks of the ultimate with the "Ult ticks:" input box. The final damage tick will be added.

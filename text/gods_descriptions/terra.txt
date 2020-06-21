@@ -1,0 +1,15 @@
+            TERRA
+
+ Skill 1:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+ Skill 2, walls:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+ Skill 2, shrapnel:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+   You can select the numbers of basic attacks affected by the passive. These are independents from the normal ones.

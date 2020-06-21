@@ -1,0 +1,17 @@
+            ISIS
+
+ Skill 1:
+   - hitting just 1 projectile.
+   - hitting 2 projectiles.
+   - hitting 3 projectiles.
+   - hitting the 4 projectiles.
+
+ Skill 2:
+   - minimum damage at minimum range.
+   - medium damage at medium range. 25% more damage.
+   - maximum damage at maximum range. 50% more damage.
+
+ Skill 3:
+   - minimum damage. The circle has no charge.
+   - medium damage. The circle is half charged.
+   - maximum damage. The circle is fully charged.

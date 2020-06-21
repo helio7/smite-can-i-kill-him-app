@@ -1,0 +1,16 @@
+            ANUBIS
+
+ Skill 1:
+   - minimum damage. 1 tick.
+   - average damage. 3 ticks.
+   - maximum damage. 6 ticks.
+
+ Skill 2:
+   - minimum damage. 1 tick.
+   - average damage. 2 ticks.
+   - maximum damage. 4 ticks.
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - average damage. 15 ticks.
+   - maximum damage. 30 ticks.

@@ -1,0 +1,8 @@
+            CERNUNNOS
+
+ Skill 2:
+   - initial damage and 1 minor tick.
+   - initial damage and 3 minor ticks.
+   - initial damage and 10 minor ticks.
+
+   You can select the number of basic attacks affected by the damage buff of the ability 1, using the "Sk1 bas:" input box.

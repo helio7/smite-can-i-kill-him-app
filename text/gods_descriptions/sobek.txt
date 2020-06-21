@@ -1,0 +1,6 @@
+            SOBEK
+
+ Skill 4:
+   - minimum damage. 25% of the maximum.
+   - medium damage. 60% of the maximum.
+   - maximum damage.

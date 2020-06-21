@@ -1,0 +1,3 @@
+            BASTET
+
+   You can select the number of damage ticks from the cats of the ability 4 with the "C. ticks:" input box.

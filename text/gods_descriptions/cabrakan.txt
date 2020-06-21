@@ -1,0 +1,6 @@
+            CABRAKAN
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - average damage. 6 ticks.
+   - maximum damage. 21 ticks.

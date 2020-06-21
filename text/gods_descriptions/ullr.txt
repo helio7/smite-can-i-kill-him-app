@@ -1,0 +1,5 @@
+            ULLR
+
+   You can active each ability of each phase, individually, using the diamond buttons.
+
+   If you active the ability 2, all the damage skills will be affected by the power buff of that ability. Basic attacks are not affected.

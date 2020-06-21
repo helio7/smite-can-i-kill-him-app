@@ -1,0 +1,12 @@
+            HACHIMAN
+
+ Skill 3:
+   - 1 damage tick.
+   - 2 damage ticks.
+
+   The ability 1 will give you 3 or 4 special basic attacks. Those basics will have a damage buff within certain distance, and another buff if they are landed beyond. You can select the number of basic attacks landed near with the "Sk1 bas:" input box.
+   For example, if you select "2", with the ability 1 level being 2:
+   - the damage of 2 basic attacks affected by the "within buff" will be added.
+   - the damage of 1 basic attack affected by the "beyond buff" will be added.
+
+   If you don't want to mess with all this, and you simply want the maximum damage from the ability 1, you can simply put a "4" or a "5" in the "Sk1 bas:" input box.

@@ -1,0 +1,8 @@
+            AO KUANG
+
+   The ability 2 gives you 6 dragons. Every time you hit a basic attack, a dragon will attack the enemy.
+   You can throw the remaining dragons with the ability 3.
+
+   You can select the number of dragons used in your melee basic attacks using the "Melee dra:" input box. 6 maximum.
+
+   Example: you choose 4. The damage of the ability 2 will be calculated with 4 melee dragons. The damage of the ability 3 will be calculated with 2 dragons.

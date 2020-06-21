@@ -1,0 +1,5 @@
+            NOX
+
+ Skill 3:
+   - minimum damage. 1 tick.
+   - maximum damage. 2 ticks.

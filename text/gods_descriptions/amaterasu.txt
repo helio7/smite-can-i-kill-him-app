@@ -1,0 +1,11 @@
+            AMATERASU
+
+      Skill 1:    
+   - firing the mirror without charge.
+   - firing the mirror with half charge.
+   - firing the mirror fully charged.
+
+      Skill 3:
+   - landing the first attack.
+   - landing the two first attacks.
+   - landing all the attacks.

@@ -1,0 +1,12 @@
+            DA JI
+
+ Skill 2:
+   - 1 damage tick.
+   - 2 damage ticks.
+   - 3 damage ticks.
+   - the 4 damage ticks.
+
+ Skill 4:
+   - 1 chain and the pull.
+   - 2 chains and the pull.
+   - the 3 chains and the pull.

@@ -1,0 +1,13 @@
+            FREYA
+
+ Skill 2:
+   - melee basics affected.
+   - ranged basics affected.
+
+ Skill 3:
+   - doing 1 damage tick.
+   - doing 2 damage ticks.
+   - doing 3 damage ticks.
+   - doing the 4 damage ticks.
+
+ You can select the number of basic attacks affected by the buff of the ability 2, using the "Sk2 bas:" input box.
